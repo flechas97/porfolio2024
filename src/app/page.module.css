@@ -1,0 +1,337 @@
+.header{
+  height: 75px;
+  width: 100%;
+  background-color: #1a1a1a67;
+  backdrop-filter: blur(5px);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: rgb(179 179 179);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.contentHeader{
+  max-width: 1200px;
+  height: 100%;
+  /* background-color: red; */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.secHeader{
+  width: 50%;
+}
+.perfilcaja{
+  width: 300px;
+  height: 40px;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 20px;
+}
+.fperfil{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.textoscaja{
+  width: 200px;
+  height: 100%;
+  /* background-color: rebeccapurple; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.textoscaja div:first-child{
+  font-size: 16px;
+  /* color: white; */
+  font-weight: bold;
+}
+.textoscaja div:last-child{
+  font-size: 12px;
+  /* color: white; */
+}
+
+
+
+.menuheader{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 40px;
+  /* color: white; */
+}
+
+.portada{
+  width: 100%;
+  height: 550px;
+  background-color: rgb(39, 41, 40);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.portadawrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttoncv{
+  width: 100px;
+  height: 40px;
+  background-color: #232323;
+  display: flex;
+  color: rgb(243, 243, 243);
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid #505050;
+  margin-bottom: 30px;
+}
+.buttoninfo{
+  width: 100px;
+  height: 35px;
+  background-color: #206caa;
+  color: rgb(243, 243, 243);
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid #505050;
+  margin-bottom: 30px;
+
+}
+.titulo{
+  font-size: 47px;
+  font-weight: normal;
+  color: rgb(237, 255, 138);
+  text-align: center;
+  /* margin-bottom: 10px; */
+
+}
+.nombre{
+  font-size: 51px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .nombre{
+    font-size: 40px;
+  }
+  .titulo{
+    font-size: 37px;
+  }
+
+}
+.subtitulo{
+  font-size: 15px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  color: rgb(179 179 179);
+}
+.tecnologiasportada{
+  width: 380px;
+  height: 40px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+}
+.itemtecnologiasportada{
+  width: 50px;
+  height: 50px;
+  /* background-color: rgb(92, 92, 92); */
+  /* border-radius: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* margin-right: 10px; */
+}
+
+.menuproyectositem{
+  cursor: pointer;
+  transition: 0.5s;
+
+}
+.menuproyectositem:hover{
+  color: white;
+}
+
+
+
+.secproyectos{
+
+}
+.secproyectoswrapper{
+  padding-top: 60px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.tituloSecciones{
+  color: rgb(117, 191, 255);
+  font-weight: normal;
+  margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.subtituloSecciones{
+  color: white;
+  font-weight: normal;
+  font-size: 25px;
+  margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.menuproyectoscaja{
+  width: 350px;
+  height: 40px;
+  background-color: #69696967;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+  color: rgb(179 179 179);
+  padding: 0px 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.menuproyectoscontenido{
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid #69696967;
+}
+.itemproyectoscontenido{
+  display: flex;
+}
+.itemproyectoscontenidoslide{
+  width: 50%;
+  min-height: 300px;
+}
+
+.itemproyectoscontenidoslide:last-child{
+  padding: 0px 30px;
+}
+.parafoSecciones{
+  color: rgb(179 179 179);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.tecnologiasProyecto{
+  margin-top: 30px;
+  width: 250px;
+  height: 40px;
+  background-color: #69696967;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+  color: rgb(179 179 179);
+  padding: 0px 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.imagenproyectoscontenidoslide{
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: rgba(248, 248, 248, 0.24) 0px 3px 8px;
+}
+
+.textosSobremi, .textosSobremiexperiencia{
+  color: white;
+  background-color: rgba(57, 57, 57, 0.36);
+  width: calc(100% - 80px);
+  padding: 20px 40px;
+  margin-top: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.textosSobremiexperiencia h5{
+  color: rgb(117, 191, 255);
+  font-weight: normal;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+.textosSobremiexperiencia ul{
+
+  color: rgb(179 179 179);
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+.textosSobremi h5{
+  color: rgb(117, 191, 255);
+  font-weight: normal;
+  font-size: 26px;
+  margin-bottom: 10px;
+
+}
+.textosSobremi p{
+  color: rgb(179 179 179);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.menuproyectoscontenidosobremi{
+  margin-top: 50px;
+}
+.itemproyectoscontenidoslidesobremi{
+  width: 50%;
+  min-height: 200px;
+
+}
+.menuproyectoscontenidotecnologias{
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .itemproyectoscontenidoslidesobremi{
+    width: calc(100% - 20px);
+    padding: 10px;
+  }
+  .menuproyectoscaja{
+    width: calc(100% - 60px);
+  }
+.tecnologiasportada{
+  width: 100%;
+  justify-content: center;
+}
+.itemproyectoscontenido{
+  flex-direction: column;
+}
+.menuproyectos{
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+.itemproyectoscontenidoslide{
+  width: calc(100% - 20px);
+  min-height: 220px;
+  padding: 10px;
+}
+.itemproyectoscontenidoslide:last-child{
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+.menuheader{
+  display: none;
+}
+}
