@@ -303,52 +303,101 @@ return (
 
         <div className={styles.menuproyectoscontenidotecnologias}>
           <h5 className={styles.tituloSecciones}>STACK TECNOLOGICO</h5>
-          <h2 className={styles.subtituloSecciones}>Lista tecnologias usadas</h2>
+          <h2 className={styles.subtituloSecciones}>Lista tecnologias, librerias y frameworks usado</h2>
         </div>
         <div className="listado list1">
-            <div>
+            <div className="listadoitem" style={{ position: 'relative' }}>
                 <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-                  <Image src="/html5.png" alt="perfil"    layout="fill"objectFit="contain" />
+                  <Image src="/html5.png" alt="perfil"    layout="fill" objectFit="contain" />
+                </div>
+                <div className="listadoitempopup invisible">
+                  <h5 className={styles.tituloSecciones}>HTML5</h5>
+                  <p className={styles.subtitulo} style={{fontSize:'12px',marginBottom:'0px'}}>5 Años Experiencia.</p>
                 </div>
             </div>
-            <div>
+            <div className="listadoitem" style={{ position: 'relative' }}>
                 <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                   <Image src="/css3.png" alt="perfil"    layout="fill"objectFit="contain" />
                 </div>
+                <div className="listadoitempopup invisible">
+                  <h5 className={styles.tituloSecciones}>CSS3</h5>
+                  <p className={styles.subtitulo} style={{fontSize:'12px',marginBottom:'0px'}}>5 Años Experiencia.</p>
+                  <h5 className={styles.tituloSecciones}>Librerias</h5>
+                  <ul>
+                    <li>Bootstrap - 4 meses</li>
+                    <li>Tailwind - 4 meses</li>
+                    <li>SCSS/SASS - 1 mes</li>
+                  </ul>
+                </div>
             </div>
-            <div>
+            <div className="listadoitem" style={{ position: 'relative' }}>
                 <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                   <Image src="/javascc.webp" alt="perfil"    layout="fill"objectFit="contain" />
                 </div>
+                <div className="listadoitempopup invisible">
+                  <h5 className={styles.tituloSecciones}>JavaScript</h5>
+                  <p className={styles.subtitulo} style={{fontSize:'12px',marginBottom:'0px'}}>4 Años Experiencia.</p>
+                  <h5 className={styles.tituloSecciones}>Librerias</h5>
+                  <ul>
+                    <li>GULP - 4 meses</li>
+                    <li>GSAP - 2 meses</li>
+                    <li>WebPack - 1 año</li>
+                    <li>VideoJS - 1 año</li>
+                  </ul>
+                </div>
             </div>
-            <div>
+            <div className="listadoitem" style={{ position: 'relative' }}>
                 <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                   <Image src="/react.png" alt="perfil"    layout="fill"objectFit="contain" />
                 </div>
+                <div className="listadoitempopup invisible">
+                  <h5 className={styles.tituloSecciones}>React</h5>
+                  <p className={styles.subtitulo} style={{fontSize:'12px',marginBottom:'0px'}}>1 Años Experiencia.</p>
+                </div>
             </div>
-            <div>
+            <div className="listadoitem" style={{ position: 'relative' }}>
                 <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                   <Image src="/larav.png" alt="perfil"    layout="fill"objectFit="contain" />
                 </div>
+                <div className="listadoitempopup invisible">
+                  <h5 className={styles.tituloSecciones}>Laravel</h5>
+                  <p className={styles.subtitulo} style={{fontSize:'12px',marginBottom:'0px'}}>2 Años Experiencia.</p>
+                </div>
             </div>
-            <div>
+            <div className="listadoitem" style={{ position: 'relative' }}>
                 <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                   <Image src="/nodess.png" alt="perfil"    layout="fill"objectFit="contain" />
                 </div>
-            </div>
-            <div>
-                <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-                  <Image src="/html5.png" alt="perfil"    layout="fill"objectFit="contain" />
+                <div className="listadoitempopup invisible">
+                  <h5 className={styles.tituloSecciones}>NodeJs</h5>
+                  <p className={styles.subtitulo} style={{fontSize:'12px',marginBottom:'0px'}}>3 Años Experiencia.</p>
                 </div>
             </div>
-            <div>
+            <div className="listadoitem" style={{ position: 'relative' }}>
                 <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-                  <Image src="/html5.png" alt="perfil"    layout="fill"objectFit="contain" />
+                  <Image src="/mysql.png" alt="perfil"    layout="fill"objectFit="contain" />
+                </div>
+                <div className="listadoitempopup invisible">
+                  <h5 className={styles.tituloSecciones}>MySQL</h5>
+                  <p className={styles.subtitulo} style={{fontSize:'12px',marginBottom:'0px'}}>3 Años Experiencia.</p>
                 </div>
             </div>
-            <div>
+            <div className="listadoitem" style={{ position: 'relative' }}>
                 <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-                  <Image src="/html5.png" alt="perfil"    layout="fill"objectFit="contain" />
+                  <Image src="/php.png" alt="perfil"    layout="fill"objectFit="contain" />
+                </div>
+                <div className="listadoitempopup invisible">
+                  <h5 className={styles.tituloSecciones}>PHP</h5>
+                  <p className={styles.subtitulo} style={{fontSize:'12px',marginBottom:'0px'}}>4 Años Experiencia.</p>
+                </div>
+            </div>
+            <div className="listadoitem" style={{ position: 'relative' }}>
+                <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                  <Image src="/next.png" alt="perfil"    layout="fill"objectFit="contain" />
+                </div>
+                <div className="listadoitempopup invisible">
+                  <h5 className={styles.tituloSecciones}>NEXT</h5>
+                  <p className={styles.subtitulo} style={{fontSize:'12px',marginBottom:'0px'}}>1 Años Experiencia.</p>
                 </div>
             </div>
         </div>

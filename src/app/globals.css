@@ -20,12 +20,32 @@ main{
   gap: 30px;
   padding: 10px;
 }
-.listado div{
+.listado .listadoitem{
   width: 75px;
   height: 75px;
   background-color: rgba(0, 128, 255, 0.228);
   border-radius: 10px;
   box-shadow: rgba(0, 128, 255, 0.504) 0px 0px 22px;
+}
+.listadoitempopup{
+  background-color: rgb(58, 58, 58);
+  color: white;
+  position: absolute;
+  min-width: 140px;
+  bottom: 80px;
+  right: -40px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.56);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.listadoitempopup ul{
+  margin-left: 15px;
+  font-size: 12px;
+  color: rgb(179 179 179);
+}
+.listadoitem:hover > .listadoitempopup{
+  display: block !important;
 }
 footer{
   margin-top: 150px;
@@ -35,8 +55,6 @@ footer{
   height: 300px;
   width: 100%;
 }
-
-
 #fotobig{
   position: fixed;
   top: 50%;
