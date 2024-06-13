@@ -10,7 +10,7 @@ main{
 
 }
 .list1{
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 .listado{
@@ -23,9 +23,10 @@ main{
 .listado .listadoitem{
   width: 75px;
   height: 75px;
-  background-color: rgba(0, 128, 255, 0.228);
-  border-radius: 10px;
-  box-shadow: rgba(0, 128, 255, 0.504) 0px 0px 22px;
+  background-color: rgba(255, 247, 0, 0.057);
+  border-radius: 9999px;
+  box-shadow: rgba(255, 247, 0, 0.178) 0px 0px 22px;
+  cursor: pointer;
 }
 .listadoitempopup{
   background-color: rgb(58, 58, 58);
@@ -38,11 +39,19 @@ main{
   padding: 10px;
   border: 1px solid rgba(128, 128, 128, 0.56);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 .listadoitempopup ul{
   margin-left: 15px;
   font-size: 12px;
   color: rgb(179 179 179);
+}
+.barraSeparadora{
+  width: 95%;
+  height: 2px;
+  background-color: rgba(255, 246, 146, 0.096);
+  box-shadow: rgba(255, 246, 146, 0.115) 0px 0px 10px;
+  margin: 10px 0px;
 }
 .listadoitem:hover > .listadoitempopup{
   display: block !important;
@@ -80,6 +89,31 @@ footer{
 .invisible{
   display: none;
 }
+.controlsImagenes{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 0, 0, 0.581);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.irizquierda{
+  width: 40px;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.537);
+}
+.irderecha{
+  width: 40px;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.537);
+}
+.imagenCarrousel{
+  
+}
+
 @media (min-width: 768px){
   #fotobig{
     width: unset;

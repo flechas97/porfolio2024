@@ -1,39 +1,69 @@
 .header{
   height: 75px;
-  width: 100%;
-  background-color: #1a1a1a67;
-  backdrop-filter: blur(5px);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* width: 100%; */
+  /* background-color: #1a1a1a67; */
+  /* backdrop-filter: blur(5px); */
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  */
   color: rgb(179 179 179);
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 999;
 }
 
 .contentHeader{
-  max-width: 1200px;
+  max-width: 350px;
   height: 100%;
   /* background-color: red; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(63 63 63 / 33%);
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
+  padding: 0px 30px;
+  backdrop-filter: blur(5px);
+  border: 1px solid #50505080 ;
+  gap: 25px;
 }
 .secHeader{
-  width: 50%;
+  width: auto;
 }
 .perfilcaja{
-  width: 300px;
+  width: auto;
   height: 40px;
   /* background-color: red; */
   display: flex;
   align-items: center;
   justify-content:center;
   gap: 20px;
+  border-right: 1px solid rgb(97, 97, 97);
+    padding-right: 15px;
+}
+
+.menuitem{
+  white-space: nowrap;
+  width: 39px;
+  height: 39px;
+  /* background-color: rgb(62, 62, 62); */
+  border: 1px solid gray;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 0px 12px;
+  color: white;
+  border-radius: 9999px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menuitem:hover{
+  background-color: rgb(93, 93, 93);
+  cursor: pointer;
 }
 .fperfil{
-  width: 40px;
-  height: 40px;
+  width: 47px;
+  height: 47px;
   border-radius: 50%;
   background-color: white;
   display: flex;
@@ -49,6 +79,10 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  display: none;
+}
+.textoscaja div{
+
 }
 .textoscaja div:first-child{
   font-size: 16px;
@@ -66,14 +100,18 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 40px;
+  gap: 25px;
   /* color: white; */
 }
 
 .portada{
+  padding-top: 75px;
   width: 100%;
   height: 550px;
   background-color: rgb(39, 41, 40);
+
+  background-image: url("/fondoPortfolio.png");
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,6 +195,8 @@
   display: flex;
   justify-content: space-around;
   align-self: center;
+
+  display: none;
 }
 .itemtecnologiasportada{
   width: 50px;
@@ -255,7 +295,7 @@
 .imagenproyectoscontenidoslide{
   border-radius: 28px;
   overflow: hidden;
-  box-shadow: rgba(248, 248, 248, 0.24) 0px 3px 8px;
+  box-shadow: rgba(255, 246, 146, 0.362) 0px 0px 15px;
 }
 
 .textosSobremi, .textosSobremiexperiencia{
@@ -331,7 +371,34 @@
   width: calc(100% - 20px);
   padding: 10px;
 }
+.contentHeader{
+  width: 80vw;
+}
+.secproyectoswrapper{
+  padding-top: 20px;
+
+}
+.portada{
+  padding-top: unset;
+  height: 450px;
+}
+.header{
+  top: unset;
+  bottom: 10px;
+}
+.contentHeader{
+  background-color: rgb(63 63 63 / 80%);
+}
 .menuheader{
-  display: none;
+  gap: 11px;
+  /* display: none; */
+}
+.portadawrapper{
+
+  width: 100%;
+  height: 91%;
+  padding: 20px;
+  background-color: #04040445;
+
 }
 }
