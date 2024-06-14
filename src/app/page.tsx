@@ -3,11 +3,18 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Slider from "./slider";
 import Slidertfg from "./slidertfg";
-import { useRef } from 'react';
+import { useRef,useEffect } from 'react';
 import { HtmlContext } from "next/dist/server/future/route-modules/app-page/vendored/contexts/entrypoints";
 
 export default function Home() {
   const fotobig = useRef<HTMLDivElement>(null);
+  const selected = useRef<HTMLDivElement>(null);
+  const proyectos = useRef(null);
+  const tecnologias = useRef(null);
+  const experiencia = useRef(null);
+  const portada = useRef(null);
+  const sobre = useRef(null);
+
   function toggleImage() {
     if (fotobig.current) {
       fotobig.current.classList.toggle('invisible');
@@ -25,6 +32,59 @@ export default function Home() {
     console.log("derecha",div);
     
   }
+  function scrollToTarget(id:string) {
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+      // selected.style.setProperty('width',`100px`);
+      if (selected.current) {
+        // selected.current.style.backgroundColor = 'lightblue';
+      }
+    }
+  }
+function initObserver(element:any, pixeles:any, threshold:any) {
+  const elemento = document.querySelector(element)
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("entrando")
+          if (selected.current) {
+            selected.current.style.width = pixeles;
+          }
+          // observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5,
+      rootMargin: '0px 0px -50% 0px',
+     } // Ajusta el umbral según tus necesidades
+  );
+
+  if (elemento) {
+    observer.observe(elemento);
+  }
+}
+
+  useEffect(() => {
+    if (window.innerWidth > 800) {
+      initObserver('#home', '46px',0.5);
+      initObserver('#tecnologias', '114px',0.5);
+      initObserver('#experiencia','180px',0.2);
+      initObserver('#proyectostrigger', '245px',0.5);
+      initObserver('#sobre', '310px',0.5);
+    }else{
+      console.log("test")
+      initObserver('#home', '46px',0.5);
+      initObserver('#tecnologias', '100px',0.5);
+      initObserver('#triggermobileexp','150px',0.1);
+      initObserver('#proyectostrigger', '203px',0.5);
+      initObserver('#sobre', '255px',0.5);
+    }
+
+
+  }, []);
 return (
    <>
       <header className={styles.header}>
@@ -42,19 +102,20 @@ return (
             </div>
             <div className={styles.secHeader}>
                <div className={styles.menuheader}>
-                  <div className={styles.menuitem}>
+                  <div className="selected" ref={selected}></div>
+                  <div className={styles.menuitem}  onClick={()=> {scrollToTarget("home")}}>
                     <Image className={styles.imagenimgproyectoscontenidoslide} src="/home.png" alt="home" width={23} height={23}  objectFit="cover" />
                   </div>
-                  <div className={styles.menuitem}>
+                  <div className={styles.menuitem} onClick={()=> {scrollToTarget("tecnologias")}}>
                     <Image className={styles.imagenimgproyectoscontenidoslide} src="/code.png" alt="home" width={23} height={23}  objectFit="cover" />
                   </div>
-                  <div className={styles.menuitem}>
+                  <div className={styles.menuitem} onClick={()=> {scrollToTarget("experiencia")}}>
                     <Image className={styles.imagenimgproyectoscontenidoslide} src="/work.png" alt="home" width={23} height={23}  objectFit="cover" />
                   </div>
-                  <div className={styles.menuitem}>
+                  <div className={styles.menuitem} onClick={()=> {scrollToTarget("proyectos")}}>
                     <Image className={styles.imagenimgproyectoscontenidoslide} src="/tool.png" alt="home" width={23} height={23}  objectFit="cover" />
                   </div>
-                  <div className={styles.menuitem}>
+                  <div className={styles.menuitem} onClick={()=> {scrollToTarget("sobre")}}>
                     <Image className={styles.imagenimgproyectoscontenidoslide} src="/mail.png" alt="home" width={23} height={23}  objectFit="cover" />
                   </div>
                </div>
@@ -70,7 +131,7 @@ return (
       </div>
   </div>
 
-      <section className={styles.portada}>
+      <section  id="home" className={styles.portada} ref={portada}>
           <div className={styles.portadawrapper}>
             <button className={styles.buttoncv} onClick={()=>{window.open("./CV_ROBERTO.pdf")}}>Descargar CV</button>
             <h1 className={styles.titulo}>Desarrollador Web</h1>
@@ -113,7 +174,7 @@ return (
 
       </section>
 
-      <section>
+      <section id="tecnologias" ref={tecnologias}>
       <div className={styles.secproyectoswrapper}>
 
         <div className={styles.menuproyectoscontenidotecnologias}>
@@ -223,14 +284,14 @@ return (
 
 
 
-      <section>
+      <section id="experiencia" ref={experiencia}>
       <div className={styles.secproyectoswrapper}>
 
 
         <div className={styles.menuproyectoscontenidosobremi}>
-          <div className={styles.itemproyectoscontenido}>
+          <div className={styles.itemproyectoscontenido} ref={experiencia}>
             <div className={styles.itemproyectoscontenidoslidesobremi}>
-              <h5 className={styles.tituloSecciones}>EXPERIENCIA</h5>
+              <h5 className={styles.tituloSecciones} id="triggermobileexp">EXPERIENCIA</h5>
               <h2 className={styles.subtituloSecciones}>Experiencia profesional</h2>
               <div className="barraSeparadora"></div>
               <p className={styles.parafoSecciones} style={{fontSize:'18px', paddingRight:'30px'}}>Como desarrollador full stack, he adquirido habilidades blandas esenciales y una gran capacidad de análisis. He aprendido a colaborar eficazmente en equipo con diversos departamentos y a desempeñarme de forma autónoma, gestionando proyectos complejos de principio a fin. Estas competencias me permiten abordar desafíos técnicos con confianza y eficiencia.</p>
@@ -290,12 +351,12 @@ return (
 
         </div>
       </section>
-      <section className={styles.secproyectos}>
+      <section  id="proyectos" className={styles.secproyectos}>
         <div className={styles.secproyectoswrapper}>
 
         
-        <div  className={styles.menuproyectos}>
-            <h5 className={styles.tituloSecciones}>PROYECTOS</h5>
+        <div  className={styles.menuproyectos} ref={proyectos}>
+            <h5 className={styles.tituloSecciones}  id="proyectostrigger">PROYECTOS</h5>
             <h2 className={styles.subtituloSecciones}>Mis proyectos destacados</h2>
             <div className="barraSeparadora"></div>
             {/* <div className={styles.menuproyectoscaja}>
@@ -416,7 +477,7 @@ return (
         </div>
       </section>
 
-      <section>
+      <section  id="sobre" ref={sobre}>
       <div className={styles.secproyectoswrapper}>
 
 

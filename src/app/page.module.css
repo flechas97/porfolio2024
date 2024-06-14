@@ -101,6 +101,7 @@
   justify-content: end;
   align-items: center;
   gap: 25px;
+  position: relative;
   /* color: white; */
 }
 
@@ -400,5 +401,8 @@
   padding: 20px;
   background-color: #04040445;
 
+}
+.menuitem:hover{
+  background-color: rgba(93, 93, 93, 0.58);
 }
 }
