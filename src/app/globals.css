@@ -111,15 +111,15 @@ footer{
   background-color: rgba(0, 0, 255, 0.537);
 }
 .selected{
-background-color: rgba(255, 242, 62, 0.221);
-height: 45px;
-width: 45px;
-border-radius: 9999px;
-position: absolute;
-top: -2.5px;
-left: -2.5px;
-z-index: -1;
-transition: 0.5s ease all;
+  background-color: rgb(255 242 62 / 22%);
+  height: 5px;
+  width: 45px;
+  border-radius: 9999px;
+  position: absolute;
+  top: 46.5px;
+  left: -2.5px;
+  z-index: -1;
+  transition: all .5s ease;
 }
 
 @media (min-width: 768px){
